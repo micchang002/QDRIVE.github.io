@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptive Pedipulation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary-text: #1a202c;
+            --secondary-text: #4a5568;
+            --background: #f7fafc;
+            --card-background: #ffffff;
+            --accent: #3182ce;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text);
+            background-color: var(--background);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .paper-header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 3rem;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-image: url('/api/placeholder/1200/300');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0,0,0,0.5);
+            background-blend-mode: overlay;
+        }
+        
+        .paper-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .paper-header h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .section {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .authors {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .author {
+            text-align: center;
+        }
+        
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .links a {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .links a:hover {
+            color: #2c5282;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background-color: #000;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="paper-header">
+            <h1>Perceptive Pedipulation</h1>
+            <h2>Learning to Walk with Sensorimotor Tracking</h2>
+        </header>
+
+        <section class="section">
+            <h3 class="section-title">Abstract</h3>
+            <p>We present a novel approach to legged robot locomotion that enables adaptive walking through real-time sensorimotor tracking and perceptive control.</p>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Authors</h3>
+            <div class="authors">
+                <div class="author">
+                    <strong>Your Name</strong>
+                    <p>Your Institution</p>
+                </div>
+                <!-- Add more authors as needed -->
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Video</h3>
+            <div class="video-container">
+                <!-- Replace with your actual video embed -->
+                <iframe 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                    title="Perceptive Pedipulation" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">Resources</h3>
+            <div class="links">
+                <a href="#">Paper (PDF)</a>
+                <a href="#">ArXiv</a>
+                <a href="#">Code</a>
+                <a href="#">Supplementary</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
