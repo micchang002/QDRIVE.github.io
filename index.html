@@ -1,123 +1,238 @@
-import React from 'react';
-import { FileText, Github, Youtube } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-const ProjectPage = () => {
-  return (
-    <div className="max-w-4xl mx-auto px-5 py-8 text-center">
-      {/* Title */}
-      <h1 className="text-4xl font-bold mt-12 mb-5 font-serif">
-        Q-DRIVE : Quadrupedal Deep Reinforcement for<br />
-        Intelligent Versatile Execution
-      </h1>
+  <!-- Optional: Google Fonts or any custom fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
-      {/* Authors */}
-      <div className="mb-10 text-gray-600">
-        <div className="text-lg mb-2">
-          <span className="inline-block mx-2">Yu-Cheng Chang <sup>*1</sup></span>
-          <span className="inline-block mx-2">Ching-Hsiang Wu <sup>*2</sup></span>
-          <span className="inline-block mx-2">Yu-Chien Huang <sup>*3</sup></span>
-          <span className="inline-block mx-2">Yu-Cheng Chang <sup>*4</sup></span>
-        </div>
-        <div className="text-sm text-gray-500">
-          <span>1Simon Fraser University &nbsp;·&nbsp; 2UIUC &nbsp;·&nbsp; 3UC Berkeley &nbsp;·&nbsp; 4Stanford</span>
-        </div>
-        <div className="text-sm text-gray-500 mt-2">
-          *Equal Contribution
-        </div>
-      </div>
+  <style>
+    /* Basic resets */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.5;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-      {/* Icons Row */}
-      <div className="flex justify-center items-center gap-8 mb-12">
-        <a href="#" className="flex flex-col items-center group">
-          <div className="w-9 h-9 mb-1">
-            <FileText className="w-full h-full" />
-          </div>
-          <span className="font-semibold text-gray-800 group-hover:underline">Paper</span>
+    /* Container to center content and control width */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Main Title */
+    .main-title {
+      font-family: 'Merriweather', serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* Author list */
+    .authors {
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+    .authors span {
+      display: inline-block;
+      margin: 0 5px;
+      line-height: 1.4;
+    }
+    .affiliation-note {
+      font-size: 0.95rem;
+      color: #777;
+      display: block;
+      margin-top: 8px;
+    }
+
+    /* Icons Section */
+    .icons-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    .icon-wrapper {
+      margin: 0 15px;
+      text-align: center;
+    }
+    .icon-wrapper img {
+      width: 36px;
+      height: 36px;
+      display: block;
+      margin: 0 auto 5px auto;
+    }
+    .icon-wrapper a {
+      color: #333;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 40px 0 20px 0;
+    }
+
+    /* YouTube Embed */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Footer */
+    footer {
+      font-size: 0.875rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Title -->
+    <h1 class="main-title">
+      Q-DRIVE : Quadrupedal Deep Reinforcement for<br>
+      Intelligent Versatile Execution
+    </h1>
+
+    <!-- Authors -->
+    <p class="authors">
+      <!-- Example: Adapt these lines as needed -->
+      <span>Yu-Cheng Chang <sup>*1</sup></span>
+      <span>Ching-Hsiang Wu <sup>*2</sup></span>
+      <span>Yu-Chien Huang <sup>*3</sup></span>
+      <span>Yu-Cheng Chang <sup>*4</sup></span><br>
+      <span class="affiliation-note">
+        1Simon Fraser University &nbsp;&middot;&nbsp; 2UIUC &nbsp;&middot;&nbsp; 3UC Berkeley &nbsp;&middot;&nbsp; 4Stanford &nbsp;&middot;&nbsp; ...
+      </span>
+      <span class="affiliation-note">
+        *Equal Contribution
+      </span>
+    </p>
+
+    <!-- Icons row (arXiv, Paper, Code, Video) -->
+    <div class="icons-row">
+      <!-- <div class="icon-wrapper">
+        <a href="#" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/000000/cross.png" alt="arXiv Icon" />
+          arXiv
         </a>
-        <a href="#" className="flex flex-col items-center group">
-          <div className="w-9 h-9 mb-1">
-            <Github className="w-full h-full" />
-          </div>
-          <span className="font-semibold text-gray-800 group-hover:underline">Code</span>
-        </a>
-        <a href="#" className="flex flex-col items-center group">
-          <div className="w-9 h-9 mb-1">
-            <Youtube className="w-full h-full" />
-          </div>
-          <span className="font-semibold text-gray-800 group-hover:underline">Video</span>
+      </div> -->
+      <div class="icon-wrapper">
+        <a href="#" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/000000/document.png" alt="Paper Icon" />
+          Paper
         </a>
       </div>
-
-      {/* Abstract */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Abstract</h2>
-        <p className="text-left text-gray-800">
-          Reinforcement learning combined with sim-to-real transfer offers a general
-          framework for developing locomotion controllers for legged robots. To
-          facilitate successful deployment in the real world, smoothing techniques,
-          such as low-pass filters and smoothness rewards, are often employed to
-          develop policies with smooth behaviors. However, because these techniques
-          are non-differentiable and usually require tedious tuning of many
-          hyperparameters, they tend to require extensive manual tuning for each
-          robotic platform. To address this challenge and establish a general
-          technique for enforcing smooth behaviors, we propose a simple and
-          effective method that imposes a Lipschitz constraint on a learned policy,
-          which we refer to as Lipschitz-Constrained Policies (LCP). We show that
-          the Lipschitz constraint can be implemented in the form of a gradient
-          penalty, which provides a differentiable objective that can be easily
-          incorporated with automatic differentiation frameworks. We demonstrate
-          that LCP effectively replaces the need for smoothing rewards or low-pass
-          filters and can be easily integrated into training frameworks for many
-          distinct humanoid robots. We extensively evaluate LCP in both simulation
-          and real-world humanoid robots, producing smooth and robust locomotion
-          controllers.
-        </p>
-      </section>
-
-      {/* Method */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Method</h2>
-        <p className="text-left text-gray-800">
-          RL-based policies are prone to producing <strong>jittery behaviors</strong>.
-          Lipschitz continuity is a way to characterize the smoothness of a function.
-          We propose Lipschitz-Constrained-Policies (LCP), a simple method to train policies
-          that produce smooth behaviors by enforcing a Lipschitz constraint on the policy.
-          This constraint is implemented as a gradient penalty, which is differentiable and
-          can be easily integrated into existing RL training pipelines with only a few lines
-          of code. LCP provides a simple and effective alternative to commonly used
-          non-differentiable smoothing techniques.
-        </p>
-      </section>
-
-      {/* Images */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-        <div className="w-full aspect-video bg-gray-200 flex items-center justify-center text-gray-500">
-          Sample Image 1
-        </div>
-        <div className="w-full aspect-video bg-gray-200 flex items-center justify-center text-gray-500">
-          Sample Image 2
-        </div>
-        <div className="w-full aspect-video bg-gray-200 flex items-center justify-center text-gray-500">
-          Sample Image 3
-        </div>
+      <div class="icon-wrapper">
+        <a href="#" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub Icon" />
+          Code
+        </a>
       </div>
-
-      {/* Video */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Supplementary Video</h2>
-        <div className="relative w-full pt-[56.25%]">
-          <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500">
-            Video Placeholder
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-sm text-gray-500">
-        © 2024 Your Name or Organization
-      </footer>
+      <div class="icon-wrapper">
+        <a href="#" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png" alt="YouTube Icon" />
+          Video
+        </a>
+      </div>
     </div>
-  );
-};
+    
+    <!-- Abstract Section -->
+    <h2 class="section-title">Abstract</h2>
+    <p class="content-text">
+      Reinforcement learning combined with sim-to-real transfer offers a general
+      framework for developing locomotion controllers for legged robots. To
+      facilitate successful deployment in the real world, smoothing techniques,
+      such as low-pass filters and smoothness rewards, are often employed to
+      develop policies with smooth behaviors. However, because these techniques
+      are non-differentiable and usually require tedious tuning of many
+      hyperparameters, they tend to require extensive manual tuning for each
+      robotic platform. To address this challenge and establish a general
+      technique for enforcing smooth behaviors, we propose a simple and
+      effective method that imposes a Lipschitz constraint on a learned policy,
+      which we refer to as Lipschitz-Constrained Policies (LCP). We show that
+      the Lipschitz constraint can be implemented in the form of a gradient
+      penalty, which provides a differentiable objective that can be easily
+      incorporated with automatic differentiation frameworks. We demonstrate
+      that LCP effectively replaces the need for smoothing rewards or low-pass
+      filters and can be easily integrated into training frameworks for many
+      distinct humanoid robots. We extensively evaluate LCP in both simulation
+      and real-world humanoid robots, producing smooth and robust locomotion
+      controllers.
+    </p>
 
-export default ProjectPage;
+    <!-- Method Section -->
+    <h2 class="section-title">Method</h2>
+    <p class="content-text">
+      RL-based policies are prone to producing <strong>jittery behaviors</strong>. 
+      Lipschitz continuity is a way to characterize the smoothness of a function. 
+      We propose Lipschitz-Constrained-Policies (LCP), a simple method to train policies 
+      that produce smooth behaviors by enforcing a Lipschitz constraint on the policy. 
+      This constraint is implemented as a gradient penalty, which is differentiable and 
+      can be easily integrated into existing RL training pipelines with only a few lines 
+      of code. LCP provides a simple and effective alternative to commonly used 
+      non-differentiable smoothing techniques.
+    </p>
+
+    <!-- Example images below -->
+    <div class="images-section">
+      <!-- Replace src with your actual images -->
+      <img src="https://via.placeholder.com/300x180.png?text=Sample+Image+1" alt="Sample Image 1">
+      <img src="https://via.placeholder.com/300x180.png?text=Sample+Image+2" alt="Sample Image 2">
+      <img src="https://via.placeholder.com/300x180.png?text=Sample+Image+3" alt="Sample Image 3">
+    </div>
+
+    <!-- Supplementary Video Section -->
+    <h2 class="section-title">Supplementary Video</h2>
+    <div class="video-container">
+      <!-- Replace VIDEO_ID with your actual YouTube video ID -->
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      © 2024 Your Name or Organization
+    </footer>
+  </div>
+
+</body>
+</html>
